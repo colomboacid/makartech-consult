@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makartech Music</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="pupa">
+        <a href="./index.html" class="logo"
+          ><span class="logo__web">Makartech</span>Music</a
+        >
+        <nav>
+          <ul>
+            <li><a class="nav-item" href="./index.html">Home</a></li>
+            <li><a class="nav-item" href="./catalog.html">Catalog</a></li>
+            <li><a class="nav-item" href="./about.html">About Us</a></li>
+            <li><a class="nav-item" href="#">Order</a></li>
+            <div class="item">
+              <li>
+                <a
+                  class="nav-item"
+                  href="mailto:info@devstudio.com"
+                  class="link"
+                >
+                  makarevicbiznes@gmail.com</a
+                >
+              </li>
+              <li>
+                <a class="nav-item" href="tel:+380961111111" class="link">
+                  +447537184955</a
+                >
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="contacts" class="scaka">
+      <div class="container">
+        <section class="contact-form">
+          <div class="container">
+            <h2 class="section-title">Place an Order</h2>
+            <p class="section-description">
+              Fill out the form below to place your order. We will get back to
+              you as soon as possible.
+            </p>
+            <form id="contact-form" class="form" action="#" method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+              <div class="form-group">
+                <label for="product">Product</label>
+                <select id="product" name="product" required>
+                  <option value="">Select a product</option>
+                  <option value="Product 1">Guitars</option>
+                  <option value="Product 2">Drums</option>
+                  <option value="Product 3">Pianos</option>
+                  <option value="Product 3">Trumpet</option>
+                  <option value="Product 3">Saxophones</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="button">Submit Order</button>
+            </form>
+          </div>
+          <script>
+            const form = document.getElementById("contact-form");
+
+            form.addEventListener("submit", (e) => {
+              e.preventDefault();
+              const successMessage = document.createElement("p");
+              successMessage.textContent = "Form submitted successfully!";
+              form.insertAdjacentElement("afterend", successMessage);
+            });
+          </script>
+        </section>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <span class="contact-info">36 Weydon Ln, Farnham GU9 8UP</span>
+          </li>
+          <li>
+            <span class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </span>
+            <span class="contact-info">+447537184955</span>
+          </li>
+          <li>
+            <span class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="contact-info">makarevicbiznes@gmail.com</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>© 2023 Makartech Music. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
